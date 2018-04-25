@@ -1,4 +1,5 @@
-# mosquitto-auth-plugin
+# Mosquitto Auth Plugin - PostgreSQL
+
 Plugin para Autenticação e Autorização de usuários no Mosquitto
 
 ## Introdução
