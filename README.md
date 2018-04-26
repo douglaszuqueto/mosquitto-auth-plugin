@@ -6,7 +6,14 @@ Plugin para Autenticação e Autorização de usuários no Mosquitto
 
 Este plugin é originado do projeto [Mosquitto Go Auth](https://github.com/iegomez/mosquitto-go-auth) com uma diferença do mesmo ser adaptado para atender demandas mais especificas em conjunto com o Broker MQTT Mosquitto.
 
-## Depedências
+## Dependências
+
+As depedências serão instaladas de acordo com o cenário que você escolher. Portanto irei me basear na distro **Ubuntu**.
+
+Em resumo você terá 2 dependências principais: 
+
+* Go(golang)
+* Ferramentas para compilação
 
 ## Build
 
