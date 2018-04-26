@@ -54,6 +54,21 @@ Depois de ter instalado o serviço, não se esqueça de configurar algumas coisa
 
 ### Script
 
+Nos 2 próximos tópicos será mostrado a estrutura base referente ao que é necessário par ao correto funcionamento no que tange a **Atenticação e Autorização** de usuários e seus devidos tópicos.
+
+Fica a sua escolha qual **database** irá utilizar. Você pode colocar dentro do banco que já vem pré-criado - *postgres*, mas também pode criar um de sua preferência ou até mesmo embarcar no mesmo database de seu projeto.
+
+Outra escolha opcional é a questão do **schema** a ser utilizado. Como padrão do postgres deixei no *public*, mas você pode criar um chamado **mqtt** por exemplo - em meu projeto, é esta estrutura que eu sigo. Deixo abaixo a estrutura que pretendo adotar no projeto [controle de acesso](https://github.com/douglaszuqueto/controle-de-acesso)
+
+* Database: controle-de-acesso
+    * Schema: mqtt
+        * Table: user
+        * Table: acl 
+
+Caso mude o schema, não esqueça de estar mudando o schema nos scripts abaixo.
+
+De *CREATE TABLE public."user"* por **CREATE TABLE seu_schema."user"**
+
 #### Tabela user
 
 ```sql
