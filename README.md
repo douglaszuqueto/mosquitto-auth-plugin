@@ -35,6 +35,19 @@ Em resumo você terá 2 dependências principais:
 
 ## PostgreSQL
 
+Como o plugin é fortemente atrelado ao Banco de dados, se faz necessário a criação do ecossistema base para funcionamento - "podendo" ser adaptado de acordo com o cenário do projeto.
+
+### Instalar
+
+Para começar, você precisa ao mínimo ter o **PostgreSQL** instalado em sua máquina(desktop, docker, raspberry, servidor...). Recomendo também alguma interface gŕafica para manipulação do banco de dados - eu, particularmente estou usando o **PgAdmin4**.
+
+### Configurar
+
+Depois de ter instalado o serviço, não se esqueça de configurar algumas coisas que se faz necessário no postgres.
+
+* Liberar acesso remoto;
+* Definição de senha para o usuário default;
+
 ### Estrutura
 
 ![img](https://raw.githubusercontent.com/douglaszuqueto/mosquitto-auth-plugin/master/.github/mosquitto-auth-plugin.png)
