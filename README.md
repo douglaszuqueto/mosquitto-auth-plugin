@@ -30,7 +30,7 @@ Este plugin é originado do projeto [Mosquitto Go Auth](https://github.com/iegom
 
 ### Estrutura
 
-[!img]()https://raw.githubusercontent.com/douglaszuqueto/mosquitto-auth-plugin/master/.github/mosquitto-auth-plugin.png
+![img](https://raw.githubusercontent.com/douglaszuqueto/mosquitto-auth-plugin/master/.github/mosquitto-auth-plugin.png)
 
 ### Script
 
