@@ -142,7 +142,7 @@ Segue abaixo uma tabela referente a todas opçoes possíveis de configuração:
 | pg_sslkey         |                   |     N       | SSL/TLS Client Cert. Key
 | pg_sslrootcert    |                   |     N       | SSL/TLS Root Cert
 
-**Observação:** Todas opções listadas acima levam o prefixo auth_opt_. Ou seja, cada opção deverá ficar no seginte formato: **auth_opt_pg_host***
+**Observação:** Todas opções listadas acima levam o prefixo auth_opt_. Ou seja, cada opção deverá ficar no seginte formato: **auth_opt_pg_host**
 
 ## Referências
 
