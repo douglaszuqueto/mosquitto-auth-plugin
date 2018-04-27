@@ -18,6 +18,7 @@ Plugin para Autenticação e Autorização de usuários no Mosquitto
     - [Estrutura](#estrutura)
         - [Script](#script)
 - [Integrando](#integrando)
+    - [Exemplo de configuração](#exemplocompleto-de-configuração)
 
 
 ## Introdução
@@ -162,7 +163,7 @@ Segue abaixo uma tabela referente a todas opçoes possíveis de configuração:
 
 **Observação:** Todas opções listadas acima levam o prefixo auth_opt_. Ou seja, cada opção deverá ficar no seginte formato: **auth_opt_pg_host**.
 
-### Exemplo(completo) de configuração:**
+### Exemplo(completo) de configuração
 
 ```
 # Configurations
