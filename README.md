@@ -2,6 +2,24 @@
 
 Plugin para Autenticação e Autorização de usuários no Mosquitto
 
+## Índice
+
+- [Introdução](#introducao)
+- [Dependências](#dependencias)
+- [Build](#build)
+    - [Standalone](#standalone)
+    - [Docker](#docker)
+- [Configuração](#configuracao)
+    - [Geral](#geral)
+    - [PostgreSQL](#postgresql)
+- [PostgreSQL](#postgresql)
+    - [Instalar](#instalar)
+    - [Configurar](#configurar)
+    - [Estrutura](#estrutura)
+        - [Script](#script)
+- [Integrando](#integrando)
+
+
 ## Introdução
 
 Este plugin é originado do projeto [Mosquitto Go Auth](https://github.com/iegomez/mosquitto-go-auth) com uma diferença do mesmo ser adaptado para atender demandas mais especificas em conjunto com o Broker MQTT Mosquitto.
@@ -119,7 +137,7 @@ ALTER TABLE public.acl
     OWNER to postgres;
 ```
 
-### Integrando
+## Integrando
 
 Para ocorrer a devida integração, você terá de adicionar algumas linhas no arquivo de configuração do seu broker mosquitto e depois adequar os valores de acordo
 com o cenário que você possui.
