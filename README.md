@@ -121,6 +121,29 @@ ALTER TABLE public.acl
 
 ### Integrando
 
+Para ocorrer a devida integração, você terá de adicionar algumas linhas no arquivo de configuração do seu broker mosquitto e depois adequar os valores de acordo
+com o cenário que você possui.
+
+Segue abaixo uma tabela referente a todas opçoes possíveis de configuração:
+
+
+| Option         		| default           |  Mandatory  | Meaning                  |
+| -------------- 		| ----------------- | :---------: | ------------------------ |
+| pg_host           | localhost         |             | hostname/address
+| pg_port           | 5432              |             | TCP port
+| pg_user           |                   |     Y       | username
+| pg_password       |                   |     Y       | password
+| pg_dbname         |                   |     Y       | database name
+| pg_userquery      |                   |     Y       | SQL for users
+| pg_superquery     |                   |     N       | SQL for superusers
+| pg_aclquery       |                   |     N       | SQL for ACLs
+| pg_sslmode        |     disable       |     N       | SSL/TLS mode.
+| pg_sslcert        |                   |     N       | SSL/TLS Client Cert.
+| pg_sslkey         |                   |     N       | SSL/TLS Client Cert. Key
+| pg_sslrootcert    |                   |     N       | SSL/TLS Root Cert
+
+**Observação:** Todas opções listadas acima levam o prefixo auth_opt_. Ou seja, cada opção deverá ficar no seginte formato: **auth_opt_pg_host***
+
 ## Referências
 
 * [Mosquitto Auth Plug](https://github.com/jpmens/mosquitto-auth-plug)
