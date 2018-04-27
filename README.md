@@ -160,7 +160,45 @@ Segue abaixo uma tabela referente a todas opçoes possíveis de configuração:
 | pg_sslkey         |                   |     N       | SSL/TLS Client Cert. Key
 | pg_sslrootcert    |                   |     N       | SSL/TLS Root Cert
 
-**Observação:** Todas opções listadas acima levam o prefixo auth_opt_. Ou seja, cada opção deverá ficar no seginte formato: **auth_opt_pg_host**
+**Observação:** Todas opções listadas acima levam o prefixo auth_opt_. Ou seja, cada opção deverá ficar no seginte formato: **auth_opt_pg_host**.
+
+**Exemplo completo de configuração:**
+
+```
+# Configurations
+
+allow_anonymous false
+
+log_type error
+log_type warning
+log_type notice
+log_type information
+log_type debug
+
+# MQTT
+
+listener 1883
+
+# MQTT Websockets
+
+listener 8083
+protocol websockets
+
+auth_plugin /mosquitto-auth-plugin/go-auth.so
+
+auth_opt_backends postgres
+auth_opt_log_level debug
+
+auth_opt_pg_host postgres
+auth_opt_pg_port 5432
+auth_opt_pg_dbname controle-de-acesso
+auth_opt_pg_user postgres
+auth_opt_pg_password root
+auth_opt_pg_userquery select password from mqtt."user" where username = $1 limit 1
+auth_opt_pg_superquery select count(*) from mqtt."user" where username = $1 and is_admin = true
+auth_opt_pg_aclquery SELECT a.topic FROM mqtt."acl" a INNER JOIN mqtt."user" u ON u.id = a.id_user WHERE (u.username = $1) AND a.rw >= $2
+
+```
 
 ## Referências
 
